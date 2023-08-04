@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03 Combinators in CSS</title>
+
+    <style>
+
+        /*
+        Make relationships between the selectors
+
+        There are 4 types of Combinator
+        1) Child Combinator - check direct child ( > )
+        2) Decendent Combinator - select the child if exist anywhere inside the parent ( " " space )
+        3) Adjacent Combinator - select the element which is located first after given first element ( + )
+        4) General Siblings Combinator - select the element which is located after given first element ( ~ )
+        */
+
+        /*1) Child Combinator - check direct child ( > )*/
+
+        /*section>h4 {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*section>h4:last-child {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*2) Decendent Combinator - select the child if exist anywhere inside the parent ( " " space )*/
+
+        /*section h4 {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*section h4:last-child {*/
+        /*    color: gold;*/
+        /*}*/
+
+        /*3) Adjacent Combinator - select the element which is located first after given first element ( + )*/
+
+        /*h4 + div {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*4) General Siblings Combinator - select the element which is located after given first element ( ~ )*/
+
+        /*h4 ~ h2 {*/
+        /*    color: deepskyblue;*/
+        /*}*/
+
+
+        /*-------------------------------------------------------------------------*/
+
+        ul>li:first-child>ol li {
+            color: deeppink;
+        }
+        ul>li:first-child>ol>li:first-child {
+            color: red;
+        }
+        ul>li:first-child>ol>li:nth-child(2) {
+            color: orange;
+        }
+
+        ul>li:nth-child(2)>ol>li>ol>li:last-child {
+            color: green;
+        }
+        ul>li:nth-child(2)>ol>li>ol>li>ul>li:nth-child(2) {
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--    <section>-->
+<!--        <h4>Hello CSS</h4>-->
+<!--        <div>-->
+<!--            <h4>CSS Content</h4>-->
+<!--            <div>Intro</div>-->
+<!--            <div>Basics</div>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <div>JSX</div>-->
+<!--        </div>-->
+<!--        <h4>Hello JS</h4>-->
+<!--    </section>-->
+
+
+<section>
+    <h4>
+        Hello
+        <h2>HIiiiiiiiiiiiiiiiiii</h2>
+    </h4>
+    <h2>Hi 1</h2>
+    <h3>Hello 2</h3>
+    <h2>Hi 2</h2>
+    <h2>Hi 3</h2>
+</section>
+
+
+<ul>
+    <li>
+        Java
+        <ol>
+            <li>Java Basics</li>
+            <li>JavaEE</li>
+            <li>Java Spring Boot</li>
+            <li>MySql</li>
+        </ol>
+    </li>
+    <li>
+        UI Technologies
+        <ol>
+            <li>HTML
+                <ol>
+                    <li>Introduction to HTML</li>
+                    <li>HTML Text Formatting</li>
+                    <li>
+                        HTML Multimedia
+                        <ul>
+                            <li>Add Images</li>
+                            <li>Add Videos</li>
+                            <li>Add Audios</li>
+                        </ul>
+                    </li>
+                    <li>HTML Forms</li>
+                    <li>HTML Tables</li>
+                </ol>
+            </li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+    </li>
+    <li>
+        AWS and ML
+    </li>
+</ul>
+
+</body>
+</html>

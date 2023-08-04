@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 SELECTORS CSS</title>
+
+    <style>
+        /*-- Type Selector --*/
+        /*
+        h1 {
+            color: red;
+        }
+        p {
+            background-color: lightgray;
+        }
+        */
+
+
+
+        /*-- Id Selector --*/
+        /*
+        #subtopic1 {
+            color: green;
+        }
+
+        #subtopic2 {
+            color: mediumpurple;
+        }
+        */
+
+
+        /*-- Class Selector --*/
+        /*
+        .mystyle {
+            color: red;
+            background-color: pink;
+        }
+        .mystyle2 {
+            font-weight: bold;
+        }
+        */
+
+
+        /*-- Universal Selector --*/
+        /*
+        * {
+            color: red;
+        }
+        */
+
+
+        /*-- Attribute Selectors --*/
+
+        /* 🎯 Attribute Selector only with attribute */
+
+        /*[name] {*/
+        /*     color: cornflowerblue;*/
+        /* }*/
+
+        /*[href] {*/
+        /*    background-color: deeppink;*/
+        /*}*/
+
+        /* 🎯 Attribute Selector with attribute with value ( = ) */
+
+        /*[name = "js"] {*/
+        /*    font-weight: bold;*/
+        /*}*/
+
+        /*[href = "https://ibm.com"] {*/
+        /*    background-color: mediumpurple;*/
+        /*}*/
+
+        /* 🎯 Attribute Selector with starting value ( ^= ) */
+
+        /*[href ^= "https"] {*/
+        /*    background-color: lightgreen;*/
+        /*}*/
+
+        /*[href ^= "http"] {*/
+        /*    background-color: lightblue;*/
+        /*}*/
+
+        /* 🎯 Attribute Selector with ending value ( $= )*/
+        /*[href $= ".lk"] {*/
+        /*    background-color: lightskyblue;*/
+        /*}*/
+
+
+
+        /* 🎯 Attribute Selector with given value snippet ( *= ) */
+        /*[href *= "https"] {*/
+        /*    background-color: lightseagreen;*/
+        /*}*/
+
+        /*[href *= "students"] {*/
+        /*    background-color: red;*/
+        /*}*/
+
+
+        /* 🎯 Attribute Selector with given word ( ~= ) */
+        /*[href ~= "students"] {*/
+        /*    background-color: red;*/
+        /*}*/
+
+
+        /* 🎯 Attribute Selector with Type Selector */
+        /*li[name = "google"] {*/
+        /*   background-color: yellow;*/
+        /*}*/
+
+
+
+        /* 🎯 Attribute Selector with Class Selector */
+        /*.mystyle[name] {*/
+        /*    background-color: yellow;*/
+        /*}*/
+
+
+
+
+        /*
+        Pseudo Selectors
+        1) Pseudo-Class Selectors (:) -> add style to state (status, location, etc) of an element
+        2) Pseudo-Element Selectors (::) -> add style to specific part of an element
+        */
+
+        /*1) ---------------------------------------*/
+
+        /* -- 🔴 select specific status of an element*/
+
+        /* :hover */
+        /*h1:hover {*/
+        /*    color: red;*/
+        /*    cursor: pointer;*/
+        /*}*/
+
+
+
+        /* :active - Apply style when click on the element */
+        /*h1:active {*/
+        /*    color: deepskyblue;*/
+        /*}*/
+
+
+        /* :visited - apply styles to already visited links */
+
+        /*a:visited {*/
+        /*    color: red;*/
+        /*}*/
+
+        /* :link - apply styles to non-visited links */
+        /*a:link {*/
+        /*    color: lightgreen;*/
+        /*}*/
+
+
+        /* :focus - apply styles when focus to the element */
+        /*input:focus {*/
+        /*    background-color: green;*/
+        /*}*/
+
+        /* -- 🔴 select specific element according to the tree-structure (element location)*/
+
+        /* :first-child - Apply styles to first-child of parent */
+        /*li:first-child {*/
+        /*    font-weight: bold;*/
+        /*}*/
+
+        /* :last-child - Select the last element */
+        /*li:last-child {*/
+        /*    color: deepskyblue;*/
+        /*}*/
+
+        /* :nth-child(n) - Select any element */
+        /*li:nth-child(3) {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*li:nth-child(4) {*/
+        /*    color: mediumpurple;*/
+        /*}*/
+
+        /*h3:nth-child(2) {*/
+        /*    background-color: lightblue;*/
+        /*}*/
+        /*h3:first-child {*/
+        /*    background-color: lightcoral;*/
+        /*}*/
+        /*h3:last-child {*/
+        /*    background-color: yellow;*/
+        /*}*/
+
+        /*h4:first-child {*/
+        /*    color: yellow;*/
+        /*}*/
+        /*h4:last-child {*/
+        /*    color: yellow;*/
+        /*}*/
+
+        /* :nth-last-child(n) - Select the element from bottom of the list */
+
+        /*li:nth-last-child(2) {*/
+        /*    color: deeppink;*/
+        /*}*/
+
+        /* :only-child - If list has only one child then select it */
+        /*li:only-child {*/
+        /*    color: gold;*/
+        /*}*/
+
+        /*ol>li:first-child {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*ol>li:first-child {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*2) ---------------------------------------*/
+
+        /* ::before - add a content before the current content and style it */
+        h1::before {
+            content: "🥳";
+        }
+
+        /* ::after - add a content after the current content and style it */
+        h1::after {
+            content: "🎯";
+        }
+
+        /* ::first-letter - add style to first letter */
+        h3::first-letter {
+            color: yellow;
+        }
+
+        /* ::first-line - add style to first line */
+        p::first-line {
+            color: deeppink;
+        }
+
+        /* ::placeholder - style placeholder */
+        input::placeholder {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* ::file-selector-button - add style to file selector btn */
+        input::file-selector-button {
+            background-color: orange;
+        }
+
+        /* Pseudo-Element Selectors + Pseudo-Class Selectors */
+        input::file-selector-button:hover {
+            background-color: green;
+        }
+
+        /* ::selection - style web content selection (highlight and select) */
+        ::selection {
+            background-color: yellow;
+            color: white;
+        }
+
+        /* ::marker - style markers in html lists (work with lists) */
+        ::marker {
+            content: "💡";
+        }
+
+        /*-- Grouping Selector --*/
+        h1,h3,h4, #subtopic1, .mystyle {
+            color: lightcoral;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1 class="mystyle">Internet Technologies</h1>
+
+<section>
+    <h4>IJSE 01</h4>
+    <h4>IJSE 02</h4>
+    <h4>IJSE 03</h4>
+    <h4>IJSE 04</h4>
+    <h4>IJSE 05</h4>
+</section>
+
+
+<a href="http://google.com" name="google">Google</a>
+<a href="https://ibm.com" name="css">IBM</a>
+<a href="https://ijse.lk">IJSE</a>
+<a href="http://ijsehttpsstudents.lk">IJSE Students</a>
+<a href="http://ijse students .lk">IJSE Students 2</a>
+
+<h3 id="subtopic1">Content</h3>
+<ol>
+    <li name="google">HTML</li>
+    <li>
+        CSS
+        <ol>
+            <li>Introduction to CSS</li>
+            <li>History of CSS</li>
+            <li>CSS Rule</li>
+            <li>CSS Selectors</li>
+            <li>Other CSS Topics...</li>
+        </ol>
+    </li>
+    <li>JS</li>
+</ol>
+
+<ol>
+    <li>Introduction to CSS</li>
+    <li>History of CSS</li>
+    <li>CSS Rule</li>
+    <li>CSS Selectors</li>
+    <li>Other CSS Topics...</li>
+</ol>
+
+<ol>
+    <li>Introduction to CSS</li>
+</ol>
+
+<section name="html">
+    <h3 id="subtopic2" class="mystyle">HTML</h3>
+    <p class="mystyle mystyle2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis debitis explicabo fugiat ipsum iste non, perferendis praesentium recusandae vero. Adipisci corporis dolores est ex fuga tempore voluptatem voluptates voluptatibus.
+    </p>
+</section>
+
+<section>
+    <h3 class="mystyle" name="css">CSS</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis debitis explicabo fugiat ipsum iste non, perferendis praesentium recusandae vero. Adipisci corporis dolores est ex fuga tempore voluptatem voluptates voluptatibus.
+    </p>
+</section>
+
+<section name="js">
+    <h3 class="mystyle">JS</h3>
+    <p class="mystyle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis debitis explicabo fugiat ipsum iste non, perferendis praesentium recusandae vero. Adipisci corporis dolores est ex fuga tempore voluptatem voluptates voluptatibus.
+    </p>
+</section>
+
+<hr>
+
+<form action="">
+    <h3>Contact US</h3>
+
+    <label for="fname">First Name</label> <br>
+    <input type="text" name="fname" id="fname" placeholder="First Name">
+
+    <br>
+    <br>
+
+    <label for="lname">Last Name</label> <br>
+    <input type="text" name="lname" id="lname">
+
+    <br>
+    <br>
+
+    <label for="email">Email</label> <br>
+    <input type="email" name="email" id="email">
+
+    <br>
+    <br>
+
+    <label for="message">Message</label> <br>
+    <textarea name="message" id="message"></textarea>
+
+    <br>
+    <br>
+
+    <input type="file">
+
+    <br>
+    <br>
+    
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+</body>
+</html>
