@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07 Box Sizing in CSS</title>
+
+    <style>
+        /*
+            1) content-box
+            2) border-box
+        */
+
+        .box {
+            width: 300px;
+            height: 200px;
+        }
+
+        #box1 {
+            background-color: lightblue;
+            border: 10px solid deepskyblue;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #box2 {
+            background-color: limegreen;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="box1" class="box"></div>
+    <div id="box2" class="box"></div>
+
+</body>
+</html>

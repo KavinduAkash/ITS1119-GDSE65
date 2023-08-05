@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 51px;">
+<head>
+    <meta charset="UTF-8">
+    <title>08 Values in CSS ( Measurement units )</title>
+
+    <style>
+/*
+        Measurement units
+        1. Relative measurement units
+         vw - viewport width [ length ]
+         vh - viewport height [ length ]
+         em - equal measurement unit [ fonts ]
+         rem - root equal measurement unit [ fonts ]
+         % - percentage [length]
+
+        2. Absolute measurement units
+         cm [ length ]
+         mm [ length ]
+         in - inch [ length ]
+         pc - [ length ] parsec (The parsec (symbol: pc) is a unit of length used to measure the large distances to astronomical objects outside the Solar System)
+         pt - [ length ] Percentage point (Percentage point (pt), a unit for the arithmetic difference of two percentages)
+         px - pixel [ length & font ]
+*/
+
+        main {
+            /*font-size: 12px;*/
+        }
+
+        section {
+            /*font-size: 100px;*/
+            width: 300px;
+        }
+
+        div {
+            /*width: 100vw;*/
+            /*height: 100vh;*/
+            background-color: deepskyblue;
+            /*font-size: 40px;*/
+
+            /*font-size: 2em; !*1em = parent's value, 2em = 1em x 2 = parent's value x 2*!*/
+
+            /*font-size: 1rem; !* 1rem = root value *!*/
+
+            width: 100%;
+            height: 100px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<main>
+    <section>
+        <div>
+
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
