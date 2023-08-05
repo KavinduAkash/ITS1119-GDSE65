@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 CSS Cascade</title>
+
+    <style>
+
+        #btnid { /*(0, 1, 0, 0) ✅ */
+            color: mediumpurple;
+        }
+
+        .btn { /*(0, 0, 1, 0)*/
+            color: green;
+        }
+
+        button { /*(0, 0, 0, 1)*/
+            color: red;
+        }
+
+        button { /*(0, 0, 0, 1)*/
+            color: blue;
+        }
+
+        /*----------------------------------*/
+
+        ul>li { /*(0, 0, 0, 2)*/
+            color: green;
+        }
+
+        ol>li>ul>li { /*(0, 0, 0, 4)*/
+            color: orange;
+        }
+
+        ul>li:first-child { /*(0, 0, 1, 2) ✅ */
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<button id="btnid" class="btn" type="button">Click Me!</button>
+
+<ol>
+    <li>
+        Java
+        <ul>
+            <li style="color: yellow;">Basics</li> <!-- (1, 0, 0, 0) -->
+            <li>Advanced</li>
+        </ul>
+    </li>
+    <li>js</li>
+    <li>Go Lang</li>
+</ol>
+
+</body>
+</html>
