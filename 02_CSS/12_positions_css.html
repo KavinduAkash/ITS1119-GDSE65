@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12 CSS Positions</title>
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <style>
+
+        /*
+            There are 5 types of css positions.
+            1) Static
+            2) Relative
+            3) absolute
+            4) fixed
+            5) sticky
+        */
+
+        section>div {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        section>div:nth-child(1) {
+            background: red;
+        }
+
+        section>div:nth-child(2) {
+            background: blue;
+            left: 100px;
+        }
+
+        section>div:nth-child(3) {
+            background: purple;
+            left: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+</body>
+</html>
