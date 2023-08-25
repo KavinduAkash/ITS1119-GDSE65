@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14 Flex Box CSS</title>
+
+    <style>
+
+        /*
+            Flex Box
+            --------
+            flex-direction
+            --------------
+            The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
+
+            1. The direction text is laid out in a line
+            flex-direction: row; (default)
+
+            2. Like <row>, but reversed
+            flex-direction: row-reverse;
+
+            3. The direction in which lines of text are stacked
+            flex-direction: column;
+
+            4. Like <column>, but reversed
+            flex-direction: column-reverse;
+        */
+
+        #section1 {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        #section1>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            font-size: 50px;
+        }
+        #section1>div:first-child {
+            background: red;
+        }
+        #section1>div:nth-child(2) {
+            background: dodgerblue;
+        }
+        #section1>div:nth-child(3) {
+            background: gold;
+        }
+
+        /*------------------*/
+
+        #section2 {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            margin-top: 10px;
+
+            align-items: center;
+            justify-content: flex-end; /*center, flex-start, flex-end*/
+        }
+
+        #section2>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            background: red;
+            font-size: 50px;
+        }
+
+        #section3 {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid orangered;
+            display: flex;
+            margin-top: 10px;
+
+            /*align-items: center;*/
+            justify-content: space-between; /*center, flex-start, flex-end, space-around*/
+        }
+
+        #section3>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            background: red;
+            font-size: 50px;
+        }
+
+        #section3>div:first-child {
+            align-self: self-start;
+        }
+
+        #section3>div:nth-child(2) {
+            align-self: center;
+        }
+
+        #section3>div:nth-child(3) {
+            align-self: self-end;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section id="section1">
+
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+
+</section>
+
+<section id="section2">
+
+    <div>A</div>
+
+</section>
+
+<section id="section3">
+
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+
+</section>
+
+</body>
+</html>
