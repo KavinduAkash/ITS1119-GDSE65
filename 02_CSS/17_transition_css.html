@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17 Transition in CSS</title>
+
+    <style>
+        div {
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: gold;
+            transition-property: width, background-color, border-radius;
+            transition-duration: 3s;
+            transition-timing-function: linear;
+        }
+
+        div:hover {
+           width: 400px;
+           background-color: red;
+           border-radius: 100%;
+           /*transform: rotate(360deg);*/
+            transition-delay: 3s;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div></div>
+
+</body>
+</html>
