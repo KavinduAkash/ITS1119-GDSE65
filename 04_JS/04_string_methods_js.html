@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04 JS String Methods</title>
+</head>
+<body>
+
+<script>
+
+    let str = "Hello World";
+
+    str.chartAt(7); // -> 'o'
+    str.charCodeAt(0); // -> 72 (unicode value of the character)
+
+    let str1 = "IJSE";
+    let str2 = "LK";
+    str1.concat(str2); // -> IJSELK
+    str1.concat(" ", str2); // -> IJSE LK
+    str1.concat(" ", str2, " - Sri Lanka"); // -> IJSE LK - Sri Lanka
+
+    let url1 = "https://ijse.lk";
+    let url2 = "https://facebook.com";
+    url1.startsWith("https"); // -> true
+    url2.startsWith("https"); // -> false
+
+    url1.endsWith(".lk"); // -> true
+    url2.endsWith(".lk"); // -> false
+
+    String.fromCharCode(72); // -> 'H' (Gen char via the unicode value)
+    String.fromCharCode(108); // -> 'l'
+
+    // let str = "Hello World";
+    str.includes("World"); // -> true
+    str.includes("world"); // -> false
+    str.includes("IJSE"); // -> false
+
+    str.indexOf("World"); // -> 6
+    str.indexOf("llo"); // -> 2
+    str.indexOf("l"); // -> 2
+    str.indexOf("o"); // -> 4
+    str.lastIndexOf("0"); // -> 7
+
+    let value1 = "Hello";
+    let value2 = "Hello";
+    let value3 = "Zello";
+    let value4 = "Bello";
+    let value5 = "IJSE";
+    value1.localeCompare(value2); // -> 0
+    value1.localeCompare(value3); // -> -1
+    value1.localeCompare(value4); // -> 1
+    value1.localeCompare(value5); // -> -1
+
+    str.match(/o/g); // -> [o, o]
+
+    let str5 = "java,js,python";
+    str5.replace(",","/"); // -> "java/js,python"
+    str5.replaceAll(",","/"); // -> "java/js/python"
+
+    str5.search("js"); // -> 5
+    str5.search("hello"); // -> -1
+    str5.search(/o/g); // - 12
+
+    str5.slice(5); // -> "js,python"
+    str5.slice(5,10); // -> "js,py"
+
+    let myValue = "JavaScript";
+    myValue.toUpperCase(); // -> 'JAVASCRIPT'
+    myValue.toLowerCase(); // -> 'javascript'
+
+    let value2 = " www.ijse.lk ";
+    value2.trim(); // -> "www.ijse.lk"
+
+    let x = new String("Hello"); // typeof x -> object
+    x.valueOf(); // -> Hello
+
+</script>
+
+</body>
+</html>

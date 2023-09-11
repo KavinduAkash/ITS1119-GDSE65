@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 JavaScript Operators</title>
+</head>
+<body>
+
+<script>
+    /*
+    Arithmetic Operators
+    --------------------
+    Addition (+): Adds two values together.
+    Subtraction (-): Subtracts one value from another.
+    Multiplication (*): Multiplies two values.
+    Division (/): Divides one value by another.
+    Modulo (%): Returns the remainder of the division.
+     */
+
+    /*
+    Assignment Operators
+    --------------------
+    Assignment (=): Assigns a value to a variable.
+    Addition assignment (+=): Adds a value to a variable and assigns the result to the variable.
+    Subtraction assignment (-=): Subtracts a value from a variable and assigns the result to the variable.
+    Multiplication assignment (*=): Multiplies a variable by a value and assigns the result to the variable.
+    Division assignment (/=): Divides a variable by a value and assigns the result to the variable.
+    Modulo assignment (%=): Calculates the remainder of the division and assigns the result to the variable.
+    */
+    let a = 3;
+    let b = 2;
+    // console.log(a + b); // 5
+    // console.log(a - b); // 1
+    // console.log(a * b); // 6
+    // console.log(a / b); // 1.5
+    // console.log(a % b); // 1
+
+    /*
+    Comparison Operators
+    --------------------
+    Equality (==): Checks if two values are equal.
+    Inequality (!=): Checks if two values are not equal.
+    Strict equality (===): Checks if two values are equal in value and type.
+    Strict inequality (!==): Checks if two values are not equal in value or type.
+    Greater than (>): Checks if one value is greater than another.
+    Less than (<): Checks if one value is less than another.
+    Greater than or equal to (>=): Checks if one value is greater than or equal to another.
+    Less than or equal to (<=): Checks if one value is less than or equal to another.
+    */
+    let c = 3;
+    let d = "3";
+    // console.log(a==b); //false
+    // console.log(a==c); //true
+    // console.log(a==d); //true
+    // console.log(a===b); //false
+    // console.log(a===c); //true
+    // console.log(a===d); //false
+    //
+    // console.log(a!=b); //true
+    // console.log(a!=c); //false
+    // console.log(a!=d); //false
+    // console.log(a!==b); //true
+    // console.log(a!==c); //false
+    // console.log(a!==d); //true
+    //
+    // console.log(a>b); //true
+    // console.log(a<b); //false
+    // console.log(a<c); //false
+    // console.log(a>c); //false
+    // console.log(a>=c); //true
+    // console.log(a<=c); //true
+
+    /*
+    Logical Operators
+    -----------------
+    Logical AND (&&): Returns true if both operands are true.
+    Logical OR (||): Returns true if either operand is true.
+    Logical NOT (!): Negates a boolean value.
+    */
+
+    let v1 = true;
+    let v2 = false;
+    // console.log(v1 && v2); // -> false
+    // console.log(v1 || v2); // -> true
+    // console.log(!v1); // -> false
+    // console.log(!v2); // -> true
+
+    /*
+      Unary Operators
+      ---------------
+      Unary plus (+): Converts the operand into a number.
+      Unary minus (-): Negates the operand.
+      Increment (++): Increases the value of a variable by 1.
+      Decrement (--): Decreases the value of a variable by 1.
+    * */
+    let k = 1;
+    console.log(k++);
+    k = 1;
+    console.log(++k);
+
+    k = 1;
+    console.log(k--);
+    k = 1;
+    console.log(--k);
+
+    /*
+    String Operators
+    ----------------
+    Concatenation (+): Concatenates two strings together.
+    * */
+    let str100 = "GDSE";
+    let str200 = "IJSE";
+    console.log(str100 + str200); //'GDSEIJSE'
+    console.log(str100 + " " + str200); //'GDSE IJSE'
+
+</script>
+
+</body>
+</html>
