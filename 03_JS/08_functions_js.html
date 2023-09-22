@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08 Functions in JS</title>
+</head>
+<body>
+
+<script>
+
+    // Named Functions
+    function myFunction() {
+        console.log("Hello!");
+        return "IJSE";
+    }
+
+    let result = myFunction();
+    console.log(result);
+
+    function myFunction2(name, institute) {
+        console.log("Hello!" + name + ", " + institute);
+    }
+
+    myFunction2("Malith", "IJSE - Institute Of Software Engineering");
+
+    // Function Expressions
+    const myFunction3 = function (name) {
+        console.log("Hello!, " + name);
+    }
+
+    myFunction3("Janith");
+
+    // Arrow Functions
+    const arrowFun = () => {
+        console.log("hi! i'm arrow function");
+    }
+
+    arrowFun();
+
+    // Function constructor
+    const conFun = new Function('a1', 'a2', 'return a1+a2');
+    conFun(1, 2); // 3
+
+    // Anonymous Function
+    // function () {  } // you can't create function like this.
+    (function(){console.log("Hello")})(); // Hello
+
+    // call back functions
+    function f1() {
+        console.log("IJSE");
+    }
+
+    function f2() {
+        console.log("GDSE");
+    }
+
+    function f3(arg1) {
+        arg1();
+    }
+
+    f3(f1); // IJSE
+    f3(f2); // GDSE
+</script>
+
+</body>
+</html>
