@@ -74,6 +74,12 @@
 <button type="button" id="btn2">Click Me!</button>
 
 
+<br>
+<br>
+
+<label>Enter your name</label><br>
+<input type="text" id="input2">
+
 <script src="assets/lib/jquery.min.js"></script>
 
 <script>
@@ -116,7 +122,7 @@
     //     console.log(value);
     // })
 
-    // action = click, input, dblclick, mouseenter, mouseleave, mousedown, mouseup, hover, focus, blur, onKeyPress, onKeyDown, onKeyUp
+    // action = click, input, dblclick, mouseenter, mouseleave, mousedown, mouseup, mouseover, focus, blur, onKeyPress, onKeyDown, onKeyUp
 
 
     // $("#btn1").on("click", () => {
@@ -155,8 +161,20 @@
         console.log("Mouse Pressed!");
     });
 
+    /* ------------- mouseover ------------- */
     $("#box1").on("mouseover", () => {
         console.log("mouse over");
+    });
+
+    /* ------------- focus ------------- */
+    $("#input2").on("focus", () => {
+       console.log("Focused");
+       $("#input2").css("background", "green");
+    });
+
+    /* ------------- blur ------------- */
+    $("#input2").on("blur", () => {
+        $("#input2").css("background", "yellow");
     });
 
 </script>
