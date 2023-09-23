@@ -25,6 +25,13 @@
             background: #b6d4fe;
             border: 1px solid darkblue;
         }
+
+        #box2 {
+            width: 50px;
+            aspect-ratio: 1/1;
+            background: limegreen;
+            border: 1px solid darkgreen;
+        }
     </style>
 
 </head>
@@ -55,7 +62,17 @@
 <br>
 <br>
 
-<div id="box1"></div>
+<div id="box1">
+    <div id="box2"></div>
+</div>
+
+
+<br>
+<br>
+
+
+<button type="button" id="btn2">Click Me!</button>
+
 
 <script src="assets/lib/jquery.min.js"></script>
 
@@ -121,6 +138,25 @@
 
     $("#box1").on("mouseleave", () => {
         console.log("Mouse Leave");
+    });
+
+    /* ------------- mousedown ------------- */
+    $("#btn2").on("mousedown", () => {
+       console.log("Mouse Down!");
+    });
+
+    /* ------------- mouseup ------------- */
+    $("#btn2").on("mouseup", () => {
+        console.log("Mouse Up!");
+    });
+
+    /* ------------- mouse click ------------- */
+    $("#btn2").on("click", () => {
+        console.log("Mouse Pressed!");
+    });
+
+    $("#box1").on("mouseover", () => {
+        console.log("mouse over");
     });
 
 </script>
