@@ -18,70 +18,111 @@
             background: yellow;
             box-shadow: 0px 0px 5px 10px yellow;
         }
+
+        #box1 {
+            width: 100px;
+            aspect-ratio: 1/1;
+            background: #b6d4fe;
+            border: 1px solid darkblue;
+        }
     </style>
 
 </head>
 <body>
 
-<h1>0</h1>
+<!--<h1>0</h1>-->
 
-<button type="button">Click!</button>
-<button type="reset">Reset</button>
+<!--<button type="button">Click!</button>-->
+<!--<button type="reset">Reset</button>-->
 
 
-<!-- ----------------------------------------------- -->
+<!--&lt;!&ndash; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
 
-<div id="circle"></div>
-<button type="button" id="switch">OFF</button>
+<!--<div id="circle"></div>-->
+<!--<button type="button" id="switch">OFF</button>-->
 
-<!-- ----------------------------------------------- -->
+<!--&lt;!&ndash; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
 
-<input type="text">
-<button type="button" id="btn">Send</button>
+<!--<input type="text">-->
+<!--<button type="button" id="btn">Send</button>-->
 
-<!-- ----------------------------------------------- -->
+<!--&lt;!&ndash; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+
+
+<h1 id="text1">0</h1>
+<button type="button" id="btn1">Click!</button>
+
+<br>
+<br>
+
+<div id="box1"></div>
 
 <script src="assets/lib/jquery.min.js"></script>
 
 <script>
 
-    var count = 0;
+    // var count = 0;
+    //
+    // $('button').first().on('click', () => {
+    //     ++count;
+    //     $("h1").text(count);
+    // })
+    //
+    // $('button').eq(1).on('click', () => {
+    //     count = 0;
+    //     $("h1").text(count);
+    // })
+    //
+    //
+    // var isOn = false;
+    // $('#switch').on("click", () => {
+    //     if(isOn) {
+    //         // false
+    //         isOn = false;
+    //         $("#switch").text("OFF");
+    //         $("#circle").removeClass("switchOn");
+    //     } else {
+    //         // on
+    //         isOn = true;
+    //         $("#switch").text("ON");
+    //         $("#circle").addClass("switchOn");
+    //     }
+    // })
+    //
+    // $('input').on('input', (event) => {
+    //     // console.log(event.target.value);
+    // })
+    //
+    //
+    // $("#btn").on('click', () => {
+    //     var value = $('input').val();
+    //     console.log(value);
+    // })
 
-    $('button').first().on('click', () => {
-        ++count;
-        $("h1").text(count);
-    })
-
-    $('button').eq(1).on('click', () => {
-        count = 0;
-        $("h1").text(count);
-    })
+    // action = click, input, dblclick, mouseenter, mouseleave, mousedown, mouseup, hover, focus, blur, onKeyPress, onKeyDown, onKeyUp
 
 
-    var isOn = false;
-    $('#switch').on("click", () => {
-        if(isOn) {
-            // false
-            isOn = false;
-            $("#switch").text("OFF");
-            $("#circle").removeClass("switchOn");
-        } else {
-            // on
-            isOn = true;
-            $("#switch").text("ON");
-            $("#circle").addClass("switchOn");
-        }
-    })
+    // $("#btn1").on("click", () => {
+    //    console.log("hello!");
+    // });
 
-    $('input').on('input', (event) => {
-        // console.log(event.target.value);
-    })
+    /* ------------- dblclick ------------- */
+    $("#btn1").on("dblclick", () => {
+        console.log("hello!");
+    });
 
+    /* ------------- mouseenter ------------- */
 
-    $("#btn").on('click', () => {
-        var value = $('input').val();
-        console.log(value);
-    })
+    $("#box1").on("mouseenter", () => {
+       console.log("Mouse Enter");
+    });
+
+    /* ------------- mouseleave ------------- */
+
+    $("#box1").on("mouseleave", () => {
+        console.log("Mouse Leave");
+    });
+
 </script>
 
 </body>
