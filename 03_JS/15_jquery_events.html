@@ -80,6 +80,22 @@
 <label>Enter your name</label><br>
 <input type="text" id="input2">
 
+
+<br>
+<br>
+
+<input type="text" id="input3">
+
+
+<br>
+<br>
+
+<input type="radio" name="radioInput" value="GDSE" id="gdse"></input>
+<label for="gdse">GDSE</label>
+<input type="radio" name="radioInput" value="DEP" id="dep"></input>
+<label for="dep">DEP</label>
+
+
 <script src="assets/lib/jquery.min.js"></script>
 
 <script>
@@ -175,6 +191,29 @@
     /* ------------- blur ------------- */
     $("#input2").on("blur", () => {
         $("#input2").css("background", "yellow");
+    });
+
+    /* ------------- keyup ------------- */
+    $("#input3").on("keyup", () => {
+       // console.log("Key Up!");
+    });
+
+    /* ------------- keydown ------------- */
+    $("#input3").on("keydown", () => {
+        // console.log("Key Down!");
+    });
+
+    /* ------------- keypress ------------- */
+    $("#input3").on("keypress", (event) => {
+        let keyCode = event.which;
+        // Key Codes List -> https://medium.com/@kavinduakash/key-codes-list-bad912686e70
+        if(keyCode === 13) {
+            console.log("Pressed Enter Key!");
+        }
+    });
+
+    $("input[name='radioInput']").on("change", (event) => {
+       console.log(event.target.value);
     });
 
 </script>
