@@ -8,6 +8,7 @@
 
 <script>
 
+    /* ----------------------- Array Creation ----------------------- */
     // Literal Based Arrays
     var arr1 = [];
     arr1 = [1, 2, 3, "IJSE", "GDSE", true, function() {}, {name: "Malith", age: 17}];
@@ -22,6 +23,92 @@
     arr3[3]; //'Javascript'
     arr3[4]; //'Perl'
     arr3[5]; //undefined
+
+    /* ----------------------- Array Methods ----------------------- */
+    var arr4 = ["Ranil", "Mahindha", "Sajith"];
+    arr4.push("Ranjan"); // add an item to the array
+    arr4.pop(); // remove last item of the array
+    arr4.shift(); // remove first item of the array
+    arr4.unshift("Sarath"); // add an item to the beginning
+    arr4.unshift("Sarath", "Hitan"); // add more than one item to the beginning
+
+    var arr5 = [1, 2, 3, 4];
+    var arr6 = [5, 6, 7, 8, 9, 10];
+
+    vararr7 = arr5.concat(arr6); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] concat arrays
+    arr7.slice(); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] Returns a shallow copy of a portion of an array into a new array
+    arr7.slice(2); // [3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(3); // [4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(2, 6); // [3, 4, 5, 6]
+    arr7.slice(-1); // [10]
+    arr7.slice(-2); // [9, 10]
+    arr7.slice(-3); // [8, 9, 10]
+    arr7.slice(-4); // [7, 8, 9, 10]
+    arr7.slice(-5); // [6, 7, 8, 9, 10]
+    arr7.slice(-6); // [5, 6, 7, 8, 9, 10]
+    arr7.slice(-7); // [4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-8); // [3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-9); // [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-10); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-11); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr7.slice(-12); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    arr7.splice(7); // return [8, 9, 10]
+    console.log(arr7); // [1, 2, 3, 4, 5, 6, 7]
+    arr7.splice(2, 4); //  return [3, 4, 5, 6]
+    console.log(arr7); // [1, 2, 7]
+    arr7.splice(0, 1, "Hello");
+    console.log(arr7); // ['Hello', 2, 7]
+    arr7.splice(1, 3, "IJSE", "GDSE", "DEP");
+    console.log(arr7); // ['Hello', 'IJSE', 'GDSE', 'DEP']
+
+    arr7 = ['Hello', 'IJSE', 'GDSE', 'DEP', 'Hello']
+    arr7.indexOf('IJSE'); //1
+    arr7.indexOf('GDSE'); //2
+    arr7.push("Hello"); //5
+    arr7.indexOf('Hello'); // 0
+    arr7.lastIndexOf("Hello"); //4
+
+    arr7.includes("IJSE"); // true (Determines whether an array includes a certain value among its entries.)
+    arr7.includes("CMJD"); // false
+    arr7.includes("ijse"); // false
+
+    arr7.filter((item) => { return item === "Hello" } ); // ['Hello', 'Hello']
+    var arr8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    arr8.filter((item) => { return item%2 == 0 }); // [2, 4, 6, 8, 10]
+
+    arr8.map((result, index) => {console.log(`index ${index} = ${result}`)});
+    arr8.map((result) => {console.log(result)}); // Creates a new array with the results of calling a provided function on every element in the array.
+    /*
+    * 1
+    * 2
+    * 3
+    * 4
+    * 5
+    * 6
+    * 7
+    * 8
+    * 9
+    * 10
+     */
+    arr8.forEach((result) => {console.log(result)});
+    /*
+    * 1
+    * 2
+    * 3
+    * 4
+    * 5
+    * 6
+    * 7
+    * 8
+    * 9
+    * 10
+     */
+    var arr9 = [40, 10, 50, 30, 20, 60, 80, 70];
+    arr9.sort(); // [10, 20, 30, 40, 50, 60, 70, 80]
+
+
+
 </script>
 
 </body>
