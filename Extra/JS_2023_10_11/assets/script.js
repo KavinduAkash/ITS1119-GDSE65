@@ -122,4 +122,49 @@ if(mark>=75) {
     console.log("F");
 }
 
+// Logical Operators
 
+var avg = 3.3;
+
+if(mark>=65 && avg>4.0) {
+    console.log("Pass")
+} else {
+    console.log("Failed")
+}
+
+if(mark>=65 || avg>4.0) {
+    console.log("Ok, Pass")
+} else {
+    console.log("Sorry, Failed")
+}
+
+var isAllowd = false;
+if(!isAllowd) {
+    console.log("okayyyyyyyy");
+}
+
+// Loops in JS
+
+// for(let i = 0; i<10; i++) {
+//     console.log(i);
+// }
+
+// let j = 0;
+// while (j<10) {
+//     console.log(j);
+//     j++;
+// }
+
+
+// let j = 0;
+// do {
+//     console.log(j);
+//     j++;
+// } while (j<10);
+
+
+for(let k = 1; k<101; k++) {
+    if(k%2===0) {
+        console.log(k);
+    }
+}
