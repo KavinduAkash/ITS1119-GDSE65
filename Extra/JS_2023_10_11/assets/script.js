@@ -42,5 +42,15 @@ console.log(school);
 console.log(subject);
 console.log(max);
 
+// JS data types
 
-
+var x = 10; // number
+x = "Hello"; // string
+x = true; // boolean
+x = null; // object
+x = undefined; // undefined
+x = Symbol("foo"); // symbol
+x = BigInt("1231231231231"); // bigint
+x = {}; // object
+x = []; // object
+x = function () {}; // function
