@@ -26,6 +26,8 @@ $("#student-btns>button[type='button']").eq(0).on("click", () => {
     let student_id = $("#student-id").val();
     let first_name = $("#first-name").val();
     let last_name = $("#last-name").val();
+    let email = $("#email").val();
+    let mobile = $("#mobile").val();
     let address = $("#address").val();
     let program = $("input[name='flexRadioDefault']:checked").val();
 
