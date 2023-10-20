@@ -95,7 +95,65 @@
 </section>
 
 <!--item section-->
-<section id="item-section"></section>
+<section id="item-section">
+
+    <div class="container">
+        <div class="row">
+
+            <!--customer form-->
+            <div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <form>
+
+                    <h2>Item Management</h2>
+
+                    <div class="form-group mt-3">
+                        <label for="item_id">Item Id</label>
+                        <input type="number" class="form-control" id="item_id" placeholder="Enter item id">
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="item_name">Item Name</label>
+                        <input type="text" class="form-control" id="item_name" placeholder="Enter item name">
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="item_qty">Qty</label>
+                        <input type="number" class="form-control" id="item_qty" placeholder="Enter item qty">
+                    </div>
+
+                    <button type="button" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
+
+
+                </form>
+            </div>
+
+            <!--customer tbl-->
+            <div class="col-6 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+
+                <table class="table">
+
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Mobile Number</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="customer-tbl-body"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
 
