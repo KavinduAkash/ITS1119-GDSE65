@@ -27,19 +27,19 @@ $('#customer-btns>button').eq(0).on('click', () => {
                     console.log(customer);
 
                 } else {
-                    alert("Invalid Customer Mobile Number");
+                    toastr.error('Invalid Customer Mobile Number');
                 }
 
             } else {
-                alert("Invalid Customer Last Name");
+                toastr.error('Invalid Customer Last Name');
             }
 
         } else {
-            alert("Invalid Customer First Name");
+            toastr.error('Invalid Customer First Name');
         }
 
     } else {
-        alert("Invalid Customer Id");
+        toastr.error('Invalid Customer Id');
     }
 
 });
