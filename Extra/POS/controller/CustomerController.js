@@ -3,6 +3,14 @@ import {CustomerModel} from '../model/CustomerModel.js';
 
 const sriLankanMobileNumberRegex = /^(\+94|0)[1-9][0-9]{8}$/;
 
+// clean inputs
+const cleanInputs = () => {
+    $('#customer_id').val('');
+    $('#customer_first_name').val('');
+    $('#customer_last_name').val('');
+    $('#customer_mobile').val('');
+};
+
 // load customers
 const loadCustomers = () => {
 
@@ -35,6 +43,14 @@ $('#customer-btns>button').eq(0).on('click', () => {
 
                     let customer = new CustomerModel(customer_id, customer_first_name, customer_last_name, customer_mobile);
                     customer_db.push(customer);
+
+                    Swal.fire(
+                        'Success!',
+                        'Customer has been saved successfully!',
+                        'success'
+                    );
+
+                    cleanInputs();
                     loadCustomers(); // call load customer function
 
                 } else {
