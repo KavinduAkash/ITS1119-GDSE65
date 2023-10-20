@@ -1,3 +1,5 @@
+import {customer_db} from '../DB/db.js';
+
 const sriLankanMobileNumberRegex = /^(\+94|0)[1-9][0-9]{8}$/;
 
 $('#customer-btns>button').eq(0).on('click', () => {
@@ -24,7 +26,8 @@ $('#customer-btns>button').eq(0).on('click', () => {
                         customer_mobile: customer_mobile
                     };
 
-                    console.log(customer);
+                    customer_db.push(customer);
+                    console.log(customer_db);
 
                 } else {
                     toastr.error('Invalid Customer Mobile Number');
