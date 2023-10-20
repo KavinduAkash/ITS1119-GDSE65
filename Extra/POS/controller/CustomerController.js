@@ -3,6 +3,19 @@ import {CustomerModel} from '../model/CustomerModel.js';
 
 const sriLankanMobileNumberRegex = /^(\+94|0)[1-9][0-9]{8}$/;
 
+// load customers
+const loadCustomers = () => {
+
+    $('#customer-tbl-body').empty();
+
+    customer_db.map((item, index) => {
+        let tbl_row = `<tr><td>${item.customer_id}</td><td>${item.customer_first_name}</td><td>${item.customer_last_name}</td><td>${item.customer_mobile}</td></tr>`;
+        $('#customer-tbl-body').append(tbl_row);
+    });
+
+};
+
+// Add customer
 $('#customer-btns>button').eq(0).on('click', () => {
 
     let customer_id = $('#customer_id').val();
@@ -22,7 +35,7 @@ $('#customer-btns>button').eq(0).on('click', () => {
 
                     let customer = new CustomerModel(customer_id, customer_first_name, customer_last_name, customer_mobile);
                     customer_db.push(customer);
-                    console.log(customer_db);
+                    loadCustomers(); // call load customer function
 
                 } else {
                     toastr.error('Invalid Customer Mobile Number');
