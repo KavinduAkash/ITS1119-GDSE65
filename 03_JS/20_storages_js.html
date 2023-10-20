@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 Storages in JS</title>
+</head>
+<body>
+
+<script>
+
+    // localstorage
+
+    // localStorage.setItem('name', 'kavindu');
+    // var name = localStorage.getItem('name');
+    // console.log('name: ', name);
+    // // localStorage.removeItem('name');
+    // // session storage
+    //
+    // sessionStorage.setItem('age', 28);
+    // var age = sessionStorage.getItem('age');
+    // console.log(age);
+    // sessionStorage.removeItem('age');
+
+    // cookies
+
+    document.cookie = "class=ijse; expires=Sat, 14 Oct 2023 08:45:00 UTC"
+    console.log(document.cookie);
+    var arr = document.cookie.split(";")
+    console.log(arr);
+    let index = arr.findIndex(r => {
+       return r.split("=")[0] === "class"
+    });
+    console.log(index);
+    console.log(arr[index].split("=")[1]);
+</script>
+
+</body>
+</html>
