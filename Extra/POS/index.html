@@ -18,10 +18,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Customers</a>
+                <a class="nav-link" id="customer-nav">Customers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Items</a>
+                <a class="nav-link" id="item-nav">Items</a>
             </li>
         </ul>
     </div>
@@ -116,7 +116,7 @@
                         <input type="text" class="form-control" id="item_name" placeholder="Enter item name">
                     </div>
 
-                    <div class="form-group mt-3">
+                    <div class="form-group mt-3 mb-5">
                         <label for="item_qty">Qty</label>
                         <input type="number" class="form-control" id="item_qty" placeholder="Enter item qty">
                     </div>
@@ -154,7 +154,25 @@
 
 </section>
 
+
+<script src="assets/lib/jquery.min.js"></script>
 <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+
+    $('#item-section').css('display', 'none');
+
+    $('#customer-nav').on('click', () => {
+        $('#customer-section').css('display', 'block');
+        $('#item-section').css('display', 'none');
+    });
+
+    $('#item-nav').on('click', () => {
+        $('#customer-section').css('display', 'none');
+        $('#item-section').css('display', 'block');
+    });
+
+</script>
 
 </body>
 </html>
