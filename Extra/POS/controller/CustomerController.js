@@ -1,4 +1,5 @@
 import {customer_db} from '../DB/db.js';
+import {CustomerModel} from '../model/CustomerModel.js';
 
 const sriLankanMobileNumberRegex = /^(\+94|0)[1-9][0-9]{8}$/;
 
@@ -19,13 +20,7 @@ $('#customer-btns>button').eq(0).on('click', () => {
                 let isValid = sriLankanMobileNumberRegex.test(customer_mobile);
                 if(customer_mobile && isValid) {
 
-                    let customer = {
-                        customer_id: customer_id,
-                        customer_first_name: customer_first_name,
-                        customer_last_name: customer_last_name,
-                        customer_mobile: customer_mobile
-                    };
-
+                    let customer = new CustomerModel(customer_id, customer_first_name, customer_last_name, customer_mobile);
                     customer_db.push(customer);
                     console.log(customer_db);
 
