@@ -17,7 +17,7 @@ const loadCustomers = () => {
     $('#customer-tbl-body').empty();
 
     customer_db.map((item, index) => {
-        let tbl_row = `<tr><td>${item.customer_id}</td><td>${item.customer_first_name}</td><td>${item.customer_last_name}</td><td>${item.customer_mobile}</td></tr>`;
+        let tbl_row = `<tr><td class="customer_id">${item.customer_id}</td><td class="customer_first_name">${item.customer_first_name}</td><td class="customer_last_name">${item.customer_last_name}</td><td class="customer_mobile">${item.customer_mobile}</td></tr>`;
         $('#customer-tbl-body').append(tbl_row);
     });
 
@@ -68,5 +68,44 @@ $('#customer-btns>button').eq(0).on('click', () => {
     } else {
         toastr.error('Invalid Customer Id');
     }
+
+});
+
+// fill customer
+$('#customer-tbl-body').on('click', 'tr' , function() {
+    let index = $(this).index();
+
+    let customer_id = $(this).find('.customer_id').text();
+    let customer_first_name = $(this).find('.customer_first_name').text();
+    let customer_last_name = $(this).find('.customer_last_name').text();
+    let customer_mobile = $(this).find('.customer_mobile').text();
+
+    $('#customer_id').val(customer_id);
+    $('#customer_first_name').val(customer_first_name);
+    $('#customer_last_name').val(customer_last_name);
+    $('#customer_mobile').val(customer_mobile);
+
+    console.log("customer_id: ", customer_id);
+});
+
+$('#customer-search').on('input', () => {
+    let search_term = $('#customer-search').val();
+
+
+    let results = customer_db.filter((item) =>
+
+        item.customer_first_name.toLowerCase().startsWith(search_term.toLowerCase()) || item.customer_last_name.toLowerCase().startsWith(search_term.toLowerCase()) || item.customer_mobile.startsWith(search_term)
+
+    );
+
+
+    
+    console.log(results);
+
+    $('#customer-tbl-body').empty();
+    results.map((item, index) => {
+        let tbl_row = `<tr><td class="customer_id">${item.customer_id}</td><td class="customer_first_name">${item.customer_first_name}</td><td class="customer_last_name">${item.customer_last_name}</td><td class="customer_mobile">${item.customer_mobile}</td></tr>`;
+        $('#customer-tbl-body').append(tbl_row);
+    });
 
 });
